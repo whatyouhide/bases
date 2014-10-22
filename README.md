@@ -12,7 +12,7 @@ Convert **from** and **to** any base you can think of.
 A bunch of features:
 
 * Convert to bases up to **whatever you want!**
-* Use custom bases defined as arrays, like this binary base: `['↑', '↓']`.
+* Use custom bases defined as arrays, like this binary base: `['↓', '↑']`.
 * Use multicharacter digits.
 * Use **emojis** as digits!
 * Fall back to Ruby's `Integer#to_s` and `String#to_i` when the base is less
