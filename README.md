@@ -25,7 +25,7 @@ A bunch of features:
 ## Why
 
 Ruby can convert bases, but only with bases up to 36. But converting to bigger
-basis is just as fun (if not even more!), since you can easily reduce the number
+bases is just as fun (if not even more!), since you can easily reduce the number
 of character used to represent a number.
 
 I only know of gem that does this, [radix][radix]. Radix isn't bad, but I don't

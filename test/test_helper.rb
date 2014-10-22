@@ -8,6 +8,6 @@ require 'minitest/autorun'
 require 'minitest/pride'
 require 'minitest/reporters'
 
-require_relative '../lib/bases'
+require 'bases'
 
 Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
