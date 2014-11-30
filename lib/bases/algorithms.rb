@@ -33,11 +33,8 @@ module Bases::Algorithms
     # The numeric base is the number of digits in the source base.
     numeric_base = source_base.count
 
-    digits_ary.reverse.each.with_index.reduce(0) do |value, (digit, position)|
-      #  The value of `digit` in the source base is simply the index of `digit`
-      #  in the `@source_base` array.
-      digit_value_in_base10 = source_base.find_index(digit)
-      value + (digit_value_in_base10 * (numeric_base**position))
+    digits_ary.reduce(0) do |acc, digit|
+      source_base.find_index(digit) + numeric_base * acc
     end
   end
 end
