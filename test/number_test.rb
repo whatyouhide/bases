@@ -106,13 +106,13 @@ class NumberTest < Minitest::Test
 
   def test_bignums_are_supported
     value = n('//////////////').in_base(BASE64).to_i
-    assert_instance_of Bignum, value
+    assert_instance_of Integer, value
 
     # MD5 are hex numbers, very big ones too!
     hex = Digest::MD5.hexdigest('foo bar')
 
     # They convert easily to bignums...
-    assert_instance_of Bignum, n(hex).in_base(16).to_i
+    assert_instance_of Integer, n(hex).in_base(16).to_i
 
     # ...and to base 3 numbers (check that the resulting number is composed of
     # only the 0, 1 and 2 digits.
