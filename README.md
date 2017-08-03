@@ -9,6 +9,10 @@
 
 Convert **from** and **to** any base you can think of.
 
+**NOTE**: this gem is looking for a new maintainer (as I'm very busy with
+[Elixir](https://github.com/elixir-lang/elixir)). I am basically only maintaining it alive but not updating it in any way. If you're interested,
+please contact me on my email or open an issue. Thanks :D! :heart_decoration:
+
 A bunch of features:
 
 * Convert to bases up to **whatever you want!**
