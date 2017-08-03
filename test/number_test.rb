@@ -104,23 +104,6 @@ class NumberTest < Minitest::Test
     assert_equal 0, n('').in_base(10).to_i
   end
 
-  def test_bignums_are_supported
-    value = n('//////////////').in_base(BASE64).to_i
-    assert_instance_of Integer, value
-
-    # MD5 are hex numbers, very big ones too!
-    hex = Digest::MD5.hexdigest('foo bar')
-
-    # They convert easily to bignums...
-    assert_instance_of Integer, n(hex).in_base(16).to_i
-
-    # ...and to base 3 numbers (check that the resulting number is composed of
-    # only the 0, 1 and 2 digits.
-    binary_digits = n(hex).in_base(16).to_base(3)
-      .split('').uniq.map(&:to_i).sort
-    assert_equal [0, 1, 2], binary_digits
-  end
-
   def test_to_base_outputting_an_array
     assert_equal %w(b a b a), n(10).to_base([:a, :b], array: true)
     assert_equal %w(1 0), n(2).to_base(2, array: true)
