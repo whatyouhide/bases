@@ -149,7 +149,7 @@ class Bases::Number
   private
 
   def native_ruby_base?(base)
-    base.is_a?(Fixnum) && base.between?(2, 36)
+    base.is_a?(Integer) && base.between?(2, 36)
   end
 
   # A facility method for accessing the `Algorithms` module.
