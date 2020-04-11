@@ -88,6 +88,7 @@ class Bases::Number
   #   passing an integer to the constructor or by using the `in_base` method)
   def to_base(new_base, opts = {})
     opts[:array] = false if opts[:array].nil?
+    separator = opts.fetch(:separator, "")
 
     unless defined?(@source_base)
       fail Bases::NoBaseSpecifiedError, 'No base was specified'
@@ -101,7 +102,7 @@ class Bases::Number
             algorithms.convert_to_base(@value, helpers.base_to_array(new_base))
           end
 
-    opts[:array] ? res : res.join('')
+    opts[:array] ? res : res.join(separator)
   end
 
   # This function assumes you want the output in base 10 and returns an integer

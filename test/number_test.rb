@@ -113,6 +113,10 @@ class NumberTest < Minitest::Test
     assert_equal '💙💚', n(2).to_base(['💚', '💙'])
   end
 
+  def test_separator
+    assert_equal '1~0', n(62).to_base(62, separator: '~')
+  end
+
   private
 
   def n(val)
